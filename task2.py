@@ -1,5 +1,5 @@
-nums = [int(num) if num.isnumeric() else exit(1) for num in input("Input nums in spaces pls: ").split()]
-
+nums = [int(num) for num in input("Input nums in spaces pls: ").split() if num.isnumeric()]
+# appending only valid ones (i think that works)
 if not nums:
     print("Error!")
     exit(1)
