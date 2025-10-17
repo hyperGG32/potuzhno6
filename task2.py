@@ -4,7 +4,7 @@ nums = [int(num) for num in input("Input nums in spaces pls: ").split() if num.i
 if not nums:
     print("Error!")
     exit(1)
-nums.sort()
+
 def get_min(ls):
     mini = ls[0]
     for n in ls:
@@ -23,6 +23,7 @@ def get_average(ls):
     return sum(ls)/len(ls)
 
 def get_median(ls):
+    ls.sort()
     if len(ls) % 2 == 0:
         return (ls[int(len(ls)/2) - 1] + ls[int(len(ls)/2)])/2
     return ls[int(len(ls)/2)]
