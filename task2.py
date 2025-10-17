@@ -22,12 +22,9 @@ def get_average(ls):
     return sum(ls)/len(ls)
 
 def get_median(ls):
-    count = {}
-    for n in ls:
-        count[n] = count.get(n, 0) + 1
-    maxcount = get_max(list(count.values()))
-    max_list = [x[0] for x in count.items() if x[1] == maxcount]
-    return get_average(max_list)
+    if len(ls) % 2 == 0:
+        return (ls[int(len(ls)/2) - 1] + ls[int(len(ls)/2)])/2
+    return ls[int(len(ls)/2)]
 
 print(f"Count: {len(nums)}")
 print(f"Min: {get_min(nums)}")
