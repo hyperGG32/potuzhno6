@@ -24,6 +24,7 @@ def get_average(ls):
 
 def get_median(ls):
     ls.sort()
+
     if len(ls) % 2 == 0:
         return (ls[int(len(ls)/2) - 1] + ls[int(len(ls)/2)])/2
     return ls[int(len(ls)/2)]
