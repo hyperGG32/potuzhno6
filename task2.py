@@ -1,5 +1,6 @@
 nums = [int(num) for num in input("Input nums in spaces pls: ").split() if num.isnumeric()]
 # appending only valid ones (i think that works)
+nums.sort()
 if not nums:
     print("Error!")
     exit(1)
